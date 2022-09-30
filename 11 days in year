@@ -1,0 +1,77 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    int d,years,weeks,days,yr,months,mo;
+	    Scanner sc=new Scanner(System.in);
+		System.out.print("Enter number of days: ");
+		if(!sc.hasNextInt())
+		{
+		    System.out.println("Invalid Enter only integers");
+		    return;
+		}
+		d=sc.nextInt();
+		if(d<0)
+		{
+		    System.out.println("Invalid Enter only positive integers");
+		    return;
+		}
+		years=d/365;
+		yr=d%365;
+		months=yr/30;
+		mo=yr%30;
+		weeks=mo/7;
+		days=mo%7;
+		System.out.println("No. of years: "+years);
+		System.out.println("No. of months: "+months);
+		System.out.println("No. of weeks: "+weeks);
+		System.out.println("No. of days: "+days);
+	}
+}
+  
+  
+Create 11.days in years,months,weeks,days
+Sample Input :
+Enter the number of days: 756
+Sample Output:
+No. of years: 2
+No. of months:  0
+No. of weeks: 3
+No. of days: 5
+
+Test Case- 1: 
+Input: 
+Enter the number of days: 38
+Output: 
+No. of years: 0
+No. of months: 1
+No. of weeks: 1
+No. of days: 1
+
+Test Case- 2: 
+Input: 
+Enter the number of days: 3.6
+Output: 
+Invalid Enter only integers
+
+Test Case- 3: 
+Input: 
+Enter the number of days: 0
+Output: 
+No. of years: 0
+No. of months: 0
+No. of weeks: 0
+No. of days: 0
+
+Test Case- 4: 
+Input: 
+Enter the number of days: -365
+Output: 
+Invalid Enter only positive integers
+
+Test Case- 5: 
+Input: 
+Enter the number of days: -45
+Output: 
+Invalid Enter only positive integers  
